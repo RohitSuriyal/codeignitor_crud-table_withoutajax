@@ -370,4 +370,41 @@
 
 
 	// for the deletion of the data
+
+$(document).on("click",".delete",function(){
+	console.log("rohit singh");
+	console.log($(this).attr("id"));
+	const id=$(this).attr("id");
+
+	$.ajax({
+		url:"<?php echo base_url("Crud_table/delete_data") ?>",
+		method:"post",
+		data:{
+			id:id,
+
+		},
+		dataType:"json",
+		success:function(data){
+			alert("data successfully deleted");
+			$('#practice').DataTable().ajax.reload();
+
+
+
+		}
+
+
+
+
+
+
+
+	})
+	
+
+
+
+
+})
+
+
 </script>

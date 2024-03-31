@@ -80,6 +80,18 @@ class Crud_table extends CI_Controller{
 
 
     }
+    public function delete_data(){
+     $id=$this->input->post("id");
+
+     $this->load->model("Crud_model");
+     $result=$this->Crud_model->deleteQuery($id);
+     if($result){
+        echo json_encode("this is good");
+     }
+
+  
+
+    }
 
 
 

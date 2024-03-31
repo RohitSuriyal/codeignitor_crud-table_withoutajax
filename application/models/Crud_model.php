@@ -50,7 +50,12 @@ class Crud_model extends CI_Model{
      }
 
     }
-
+    public function deleteQuery($id) {
+        $this->db->where('id', $id);
+        $this->db->delete('du_category');
+        return ($this->db->affected_rows() > 0) ? true : false;
+    }
+   
 
 
 
