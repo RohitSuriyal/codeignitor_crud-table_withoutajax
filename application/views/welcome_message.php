@@ -1,4 +1,5 @@
 <?php $this->load->view("common/header") ?>
+
 <div class="container">
 	<button id="add_button" class="btn btn-primary" style="width:100%;">+Add</button>
 	<div class="table-responsive">
@@ -153,8 +154,7 @@
 
 </div>
 
-
-<!-- Modal of the update -->
+<!-- //modal for the update -->
 <div class="modal fade" id="updatemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -363,7 +363,7 @@
 
 			},
 			error: function(xhr, status, error) {
-				// Handle error
+				
 			}
 		});
 	});

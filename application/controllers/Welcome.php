@@ -45,7 +45,8 @@ class Welcome extends CI_Controller
 			$sub_array[] = '<button type="button" name="view" id=" '.$row->id.' " class="btn btn-warning btn-xs update">Update</button>';
 			$sub_array[] = '<button type="button" name="view" id=" '.$row->id.' " class="btn btn-danger btn-xs delete">Delete</button>';
 			$data[] = $sub_array;
-		}
+
+		}     
 		$output = array(
 			"draw" => $draw,
 			"recordsTotal" => $this->table_model->get_all_data(),
@@ -59,4 +60,5 @@ class Welcome extends CI_Controller
 
 		echo json_encode($output);
 	}
+	
 }
